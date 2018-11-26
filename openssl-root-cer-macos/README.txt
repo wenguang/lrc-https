@@ -1,6 +1,6 @@
 参考：https://lamjack.github.io/2018/05/17/openssl-localhost-https/
 
-MacOS下自己创建根证书、导入keychain
+MacOS下 Openssl自己创建根证书、导入keychain
 
 1、创建 root key
 openssl genrsa -des3 -out rootCA.key 2048
