@@ -13,6 +13,7 @@ openssl x509 -req -in server.csr -CA rootCA.pem -CAkey rootCA.key -CAcreateseria
 
 Nginx配置后https访问未成功，待续...
 nginx.conf的https配置如下（server.crt、server.key已拷贝在nginx目录下）：
+```
 server {
         listen       80;
         listen       443 ssl;
@@ -20,7 +21,7 @@ server {
 
         ssl_certificate      server.crt;
         ssl_certificate_key  server.key;
- 
+
         ssl_protocols        TLSv1 TLSv1.1 TLSv1.2;
 
         ssl_session_cache    shared:SSL:1m;
@@ -34,3 +35,5 @@ server {
             index  index.html index.htm;
         }
     }
+```
+
